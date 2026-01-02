@@ -2,6 +2,20 @@
 
 
 def garden_operations(error: str) -> bool:
+    """Try different exceptions
+
+    Args:
+        error (str): exception to check
+
+    Raises:
+        ValueError: ValueError
+        ZeroDivisionError: ZeroDivisionError
+        FileNotFoundError: FileNotFoundError
+        KeyError: KeyError
+
+    Returns:
+        bool: True if everything happened smoothly
+    """
     if (error == "ValueError"):
         try:
             value = int("abc")
@@ -13,24 +27,34 @@ def garden_operations(error: str) -> bool:
             value = 5 / 0
             print(value)
         except ZeroDivisionError:
-            raise ZeroDivisionError("Caught ZeroDivisionError: division by zero")
+            raise ZeroDivisionError("Caught ZeroDivisionError: \
+                                    division by zero")
     if (error == "FileNotFoundError"):
         try:
             file = open("missing.txt", "r")
             content = file.read()
             print(content)
         except FileNotFoundError:
-            raise FileNotFoundError("Caught FileNotFoundError: No such file 'missing.txt'")
+            raise FileNotFoundError("Caught FileNotFoundError: \
+                                    No such file 'missing.txt'")
     if (error == "KeyError"):
         try:
             dictionnary = {'_height': 1, '_score': 2}
             print(dictionnary['missing\\_plant'])
         except KeyError:
             raise KeyError("missing_plant")
-        
+    return (True)
 
 
 def test_error_types() -> None:
+    """Test error types
+
+    Raises:
+        Exception: In case an error is encountered
+
+    Returns:
+        None: None
+    """
     print("=== Garden Error Types Demo ===\n")
     errors = ['ValueError', 'ZeroDivisionError', 'FileNotFoundError',
               'KeyError']
@@ -52,6 +76,8 @@ def test_error_types() -> None:
         except (ValueError, ZeroDivisionError, FileNotFoundError,
                 KeyError):
             raise Exception("Caught an error, but program continues!")
+    return (None)
+
 
 try:
     test_error_types()
