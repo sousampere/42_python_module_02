@@ -2,6 +2,17 @@
 
 
 def water_plants(plant_list) -> None:
+    """Waters the plants (displays a message for each watering)
+
+    Args:
+        plant_list (list of str): plants
+
+    Raises:
+        ValueError: Invalid object (only str supported)
+
+    Returns:
+        None
+    """
     print("[Water System] Opening watering system")
     try:
         for plant in plant_list:
@@ -10,9 +21,12 @@ def water_plants(plant_list) -> None:
         raise ValueError(e)
     finally:
         print("[Water System] Closing watering system")
+    return (None)
 
 
 def test_watering_system() -> None:
+    """Test the watering system with one success and one fail
+    """
     #
     # Working watering
     #
@@ -35,6 +49,7 @@ def test_watering_system() -> None:
         print(f"ValueError : Could not water the invalid plant -> {e}")
     finally:
         print("Cleanup always done, even with errors :)")
+    return (None)
 
 
 test_watering_system()
