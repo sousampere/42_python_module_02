@@ -2,21 +2,41 @@
 
 
 class GardenError(Exception):
+    """Alias of Exception class, for GardenError"""
     def __init__(self, message: str):
         super().__init__(f"{message}")
+        return (None)
 
 
 class PlantError(GardenError):
+    """Alias of GardenError class, for Plant related errors
+    """
     def __init__(self, message: str):
         super().__init__(f"{message}")
+        return (None)
 
 
 class WaterError(GardenError):
+    """Alias of GardenError class, for Water related errors
+    """
     def __init__(self, message):
         super().__init__(f"{message}")
+        return (None)
 
 
 def check_tomato_temperature(temperature: int) -> None:
+    """Print the temperature of the tomato, if good
+    else raises an error
+
+    Args:
+        temperature (int): temperature
+
+    Raises:
+        PlantError: Temperature too high
+
+    Returns:
+        None
+    """
     if (temperature > 40):
         raise PlantError("The tomato plant is wilting!")
     else:
@@ -25,6 +45,18 @@ def check_tomato_temperature(temperature: int) -> None:
 
 
 def check_tank_volume(liter: int) -> None:
+    """Prints the volume of the tank,
+    raise an error if not ok
+
+    Args:
+        liter (int): volume
+
+    Raises:
+        WaterError: Not enough water in the tank
+
+    Returns:
+        None
+    """
     if (liter < 5):
         raise WaterError("Not enough water in the tank!")
     else:
@@ -33,6 +65,7 @@ def check_tank_volume(liter: int) -> None:
 
 
 def test_errors() -> None:
+    """Test function"""
     print("=== Custom Garden Errors Demo ===\n")
     #
     #
