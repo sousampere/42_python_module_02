@@ -1,4 +1,4 @@
-# Python module 01 : CodeCultivation
+# Python module 02 : Garden Guardian
 
 A Python project designed for students of School 42.
 This module builds on Python fundamentals and previous object-oriented concepts, introducing exception handling and defensive programming through a smart agriculture and garden management simulation, following the official Garden Guardian subject.
