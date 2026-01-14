@@ -1,44 +1,21 @@
-# Python module 04 : Cyber Archives – Data Archivist
+# Python module 02 : Garden Guardian
 
 A Python project designed for students of School 42.
-This module introduces file handling, stream management, and secure resource control through a futuristic digital archive simulation based on the official Cyber Archives – Data Archivist subject.
+This module builds on Python fundamentals and previous object-oriented concepts, introducing exception handling and defensive programming through a smart agriculture and garden management simulation, following the official Garden Guardian subject.
 
-You are trained as a Data Archivist in the year 2087, responsible for preserving humanity’s digital heritage. Through a series of missions, you will learn how to safely read, write, manage, and protect data using Python.
+This project is an introduction to Python error handling, including try/except blocks, multiple exception types, custom exceptions, raising errors, finally blocks, and building resilient systems that continue running even when failures occur.
 
-This project focuses on:
-- File reading and writing
-- Using standard input, output, and error streams
-- Context managers (with)
-- Defensive programming and error handling
-- Writing reliable programs that never corrupt data and never crash
-
-# Given rules
-
-Your code must be written in Python 3.10+
-
-Your code must respect the flake8 linter standards
-
-Each exercise must be in its own file
-
-Use proper naming conventions
-
-Classes in PascalCase
-
-Functions and variables in snake_case
-
-Include docstrings for functions, classes, and methods
-
-Type hints are mandatory for all functions and methods
-
-Only use the authorized functions and libraries specified per exercise
-
-Use the with statement when required to ensure safe file handling
-
-Use try/except blocks when required to handle system failures
-
-Your programs must never crash, even in error scenarios
-
-Focus on clear demonstration of file operations, streams, and error handling
+Given rules :
+- Your code must be written in Python 3.10+
+- Your code must respect the flake8 linter standards
+- Each exercise must be in its own file
+- Use proper naming conventions: classes in PascalCase, functions and variables in
+- snake_case
+- Include docstrings for functions, classes and methods
+- Type hints are encouraged for all functions and methods
+- You don’t need to handle input validation unless explicitly mentioned
+- Focus on demonstrating error handling concepts clearly
+- Your programs must always run without crashing
 
 ## Authors
 
